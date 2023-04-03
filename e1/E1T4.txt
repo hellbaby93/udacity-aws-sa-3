@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Clients can access to the web server using HTTP, not HTTPS via port 8080. This is insecure since the payload of the request are left unencrypted. There might be an attack that read the payload of the request, alter the body of the payload and send the request to our Web Server, which lead to data leak.
+
+# Poor practice 2
+The Web server is using public facing AWS API to connect to S3 bucket for recipe. This is insecure because the requests coming from web server are going to the internet before reaching the S3 bucket. Since the s3 bucket is accepting request from public internet, meaning the S3 is publicly accessible. The best practice for S3 bucket is to block all public access to s3.
