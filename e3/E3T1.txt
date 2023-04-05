@@ -1,0 +1,6 @@
+1. What findings were detected related to the brute force attack?
+i-08eb27c758d71a3f8 is performing SSH brute force attacks against 174.129.107.213
+
+3. Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information?
+GuardDuty can detect brute force attacks by analyzing the network traffic and login events in AWS environment. 
+GuardDuty can also analyze network traffic and identify a high number of login requests from a single IP address, which could be a sign of a brute force attack.

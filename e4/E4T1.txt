@@ -1,0 +1,10 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+1. Disable remote login to the instance
+2. Only allow connection from public subnet by updating security group.
+3. Implement AWS WAF on internet facing resources
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1. Enable encryption on the bucket, update IAM Role so that only privileged business users have access to the bucket and have permission to use KMS to decrypt objects in bucket
+2. Block all public access to the bucket. Update Bucket Policy to allow a certain set of resources to be able to access the bucket
