@@ -1,0 +1,19 @@
+From AWS Config, the following insights and recommendations were collected:
+- HTTP request to ALB should drop invalid headers
+- ALB Logging should be enabled
+- ALB should redirect HTTP to HTTPS
+- ALB delete protection should be enabled
+- EC2 instances should be managed by SSM
+- EC2 instances should have no public IP and should not be accessible directly from the Internet
+- EC2 instances' metadata version should be configured with Instance Metadata Service Version 2
+- S3 buckets public access should be prohibited
+- S3 buckets should accept HTTPS request only
+- S3 buckets should have life cycle policy check enabled
+
+From AWS inspector:
+- Restrict access to instances by modifying the Security Groups or ACLs in the network path.
+
+Security Hub:
+- The VPC default security group should not allow inbound and outbound traffic
+- CloudTrail should be enabled and configured with at least one multi-Region trail that includes read and write management events
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
