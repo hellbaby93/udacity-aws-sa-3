@@ -1,0 +1,23 @@
+a. To scan infrastructure as code templates:
+
+AWS Config Rules: AWS Config Rules allows you to define rules that evaluate the configuration of AWS resources. We can define rules to scan our infrastructure as code templates and detect violations of compliance policies or security best practices.
+Example violation: A violation of a rule that requires that all Amazon S3 buckets are configured with server-side encryption enabled.
+
+CloudFormation Guard: CloudFormation Guard is an open-source tool that allows defining rules to validate CloudFormation templates. We can use it to scan templates for security and compliance issues, such as open security groups or misconfigured IAM roles.
+Example violation: A violation of a rule that requires that all Amazon RDS instances are encrypted.
+
+b. To scan AMIs or containers for OS vulnerabilities:
+
+Amazon Inspector: Amazon Inspector is a service that automatically assesses applications for vulnerabilities or deviations from best practices. It can be used to scan AMIs or containers for OS vulnerabilities and compliance issues.
+Example vulnerability: A vulnerability in the operating system that allows an attacker to execute arbitrary code remotely.
+
+Docker Bench for Security: Docker Bench for Security is a tool that automates the process of running security checks on Docker containers. It checks for over 100 best practices around container security and provides guidance on how to fix any issues found.
+Example vulnerability: An outdated version of a software package in the container that is known to have security vulnerabilities.
+
+c. To scan an AWS environment for cloud configuration vulnerabilities, you can use tools like:
+
+AWS Security Hub: AWS Security Hub is a service that aggregates security findings from various AWS services and third-party tools. It can be used to scan an AWS environment for cloud configuration vulnerabilities, such as open security groups or misconfigured IAM roles.
+Example vulnerability: An Amazon S3 bucket that is configured to allow public access, which could allow unauthorized access to sensitive data.
+
+AWS Config: AWS Config is a service that continuously monitors and records your AWS resource configurations. It can be used to scan an AWS environment for compliance issues, such as resources that are not tagged or misconfigured access controls.
+Example violation: An Amazon EC2 instance that is not tagged with a required tag, which could indicate that the instance is not properly managed or accounted for.
